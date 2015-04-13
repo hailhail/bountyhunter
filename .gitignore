@@ -1,0 +1,9 @@
+ipynb
+venv
+
+*.pyc
+*~
+*.ipynb
+
+account.ini
+

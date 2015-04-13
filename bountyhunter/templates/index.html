@@ -14,9 +14,10 @@
     {% for request in requests %}
     <tr>
         <th scope="row">{{ request.id }}</th>
-        <td>{{ request.bounty }}</td>
+        <td data-value="{{ request.bounty }}">{{ request.bounty|filesizeformat }}</td>
         <td>{{ request.timeAdded }}</td>
         <td><a href="https://what.cd/requests.php?action=view&id={{ request.id }}"><i class="fa fa-external-link"></i></a></td>
+        <td><a href="{{ request.bandcamp }}"><i class="fa fa-external-link"></i></a></td>
     </tr>
     {% endfor %}
     </tbody>

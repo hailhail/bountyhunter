@@ -11,6 +11,7 @@ class Request(db.Model):
     url = db.Column(db.Text)
     voteCount = db.Column(db.Integer)
     year = db.Column(db.Integer)
+    bandcamp = db.Column(db.Text)
 
     def __repr__(self):
         return '<Request %i>' % (self.id)

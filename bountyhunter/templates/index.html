@@ -6,6 +6,8 @@
         <tr>
             <th>ID</th>
             <th>Bounty</th>
+            <th>Cost</th>
+            <th>GB/$</th>
             <th>Time Added</th>
             <th>Link</th>
             <th>Bandcamp</th>
@@ -16,6 +18,8 @@
     <tr>
         <th scope="row">{{ request.id }}</th>
         <td data-value="{{ request.bounty }}">{{ request.bounty|filesizeformat }}</td>
+        <td>{{ request.cost }}</td>
+        <td>{{ ((request.bounty/1024/1024/1024)/request.cost)|round(2, 'common') }}
         <td>{{ request.timeAdded }}</td>
         <td><a href="https://what.cd/requests.php?action=view&id={{ request.id }}"><i class="fa fa-external-link"></i></a></td>
         <td><a href="{{ request.bandcamp }}"><i class="fa fa-external-link"></i></a></td>

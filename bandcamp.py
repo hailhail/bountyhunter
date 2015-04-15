@@ -30,5 +30,5 @@ for request in requests:
 for uid in uids:
     print uid
     request = models.Request.query.filter_by(id=uid).first()
-    request.bandcamp = bandcamp_match(request.description)    
+    request.bandcamp = bandcamp_match(request.description)
     db.session.commit()

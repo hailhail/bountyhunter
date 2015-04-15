@@ -9,5 +9,6 @@ def index():
     requests = models.Request.query \
                      .filter(and_(models.Request.bandcamp != '', models.Request.cost != None)) \
                      .filter(models.Request.cost != 0.0) \
+                     .filter(models.Request.isFilled == 0) \
                      .all()
     return render_template('index.html', requests=requests)
